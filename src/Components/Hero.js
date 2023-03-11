@@ -5,7 +5,7 @@ function Hero() {
   return (
     <>
 
-    <div className="relative isolate overflow-hidden bg-gray-600 py-20 sm:py-32">
+    <div className="relative isolate overflow-hidden bg-gray-600 py-24 opacity-80 sm:py-32">
     <img src="https://static.thehoneycombers.com/wp-content/uploads/sites/2/2022/07/The-Clan-Hotel.png" alt="" className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"/>
    
   
