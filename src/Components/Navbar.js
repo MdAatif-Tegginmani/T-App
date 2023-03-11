@@ -28,6 +28,11 @@ function Navbar() {
        </div>
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">
+
+
+          <a href="/" className="text-gray-100  hover:bg-gray-700 hover:text-white rounded-md px-2 py-0 text-2xl font-bold">Wanderer.com</a>
+
+
             <a href="/" className="text-gray-300  hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
 
             <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>

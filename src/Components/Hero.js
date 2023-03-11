@@ -14,7 +14,7 @@ function Hero() {
         <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">It’s A Big World
         Out There, Go
         explore.</h2>
-       <button className='bg-gray-200 hover:bg-blue-dark text-black font-bold py-2 px-4 my-4 rounded-full'>BOOK YOUR NOW</button>
+       <button className='bg-gray-200 hover:bg-blue-dark text-black font-bold py-2 px-4 my-8 rounded-full'>BOOK YOUR NOW</button>
       
 
        </div>
@@ -24,9 +24,10 @@ function Hero() {
        </div>
        
        <div className='flex justify-center my-24 ml-96'>
-       <Cards ></Cards>
-       <Cards></Cards>
-       <Cards></Cards>  
+       <Cards cardHeading="Top Choices" cardText="Total 800+ destination
+       you can work with" ></Cards>
+       <Cards cardHeading='Quality Guidance' cardText="Our tour Guide Has 25 Years Experience"></Cards>
+       <Cards cardHeading='Easy Booking' cardText='Best is Class Ticket Booking System'></Cards>  
        
        </div>
        
