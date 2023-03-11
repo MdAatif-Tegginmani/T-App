@@ -1,10 +1,12 @@
 import React from 'react'
+import SearchBar from "./SearchBar"
+
 
 function Navbar() {
   return (
     <>
     <nav className="bg-gray-900">
-  <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+  <div className="mx-auto max-w-fullxl px-2 sm:px-6 lg:px-12 ">
     <div className="relative flex h-16 items-center justify-between">
       <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <button type="button" className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -43,10 +45,12 @@ function Navbar() {
           </svg>
         </button>
 
-        <div className="relative ml-3">
+        <div className='mx-4 '>    <SearchBar></SearchBar></div>
+
+
+        <div className=" ml-3">
           <div>
-            <button type="button" className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-              <span className="sr-only">Open user menu</span>
+            <button type="button" className=" flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
               <img className="h-8 w-8 rounded-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH8AAACFCAMAAABFatdeAAAAY1BMVEUAAAD29vb+/v7////5+fnBwcGsrKzz8/MWFhbp6elsbGzQ0NAzMzPExMTX19fg4OCUlJSJiYk5OTlZWVmDg4Ofn58sLCy5ubnKysp3d3dTU1NMTEwNDQ19fX1eXl4mJiZFRUUVq6rFAAAG6UlEQVR4nO2b65KrKhCFEVADxkuu5mIS3/8pj2gSNSKuNubs2lW7f81UzfA1CHSzoJn3Z4394//j001KXplsfq5/lP8Xv0arU5DdzvpuTJ9vWXBS85yg8SUXXhTctsxm21sQeYLTfCDwpfCS4LKysl+2ugSJJwguwHzupdm1cMIbK65ZWv31onwpRLAD2C/bBQIcBIQvRbohwBvbpJAH03zJU42M+6cVOgXm4iSfq9sMeGM3NTkPJvicZ7PpxjI+4YGTL4X/+ArP2MN3TwMXn4f6S7oxHbqGwMEX8XEBPGPHWMzgS75fhG5sP74QxvhcXRfDM3YdXQgjfB6tF8Qzto5GHLDzhb8o3ZhvnwRWvggWxzMWWB2w8fnhB3jGDrZPYOH/CG93YMgXv8JXDgw/wYDP85/hGcsHI/DJ58vP/K75nw588GUyJ9TjViTSxZfeMlv+uB096eDzO6Gp1e68zw7Z/rxz58R9u/NxPmHlrW+RqrLS2qSKbvh23V+FXb5M0DYeeWjAvDHzY5jDmUpvCnT5of1cM7BV0LJ560MAfoZtaOcLMOBrb0BvPPDAdGkvbHyZYv99sNIbD8D5k0oLn2MHnHwUbxzANs8dH/I5FnNP4/TagxPUSsAHfGzyHdz4ygHoE7RT8MXH/u/sGPzXJzhj/fjgh8jiOYZT+MqBENnCV2Gfj+18/jS+cgCKoK9d8MVHwt5lcvSbL3AB2ip6fCzpgLqPDsAzFWn4Eol7D6j7ZgCQUHCXLR8LPJNr7+0ANJmaMMTwnT+C+RHSXBMFGLz3bIHF9+SD7b34Mkb8vaP4ygEojYrlky8ghWdP4EPf8yZefChxgKcfOgFXTz6YduUEPhaGzQpgcNYJ7j41HzvEmD3Y8LG0afn+66b/EssbAwIfy2VWNR/N+zYEPigXV3kggw+8i6//OgYxD3W2JOx/JdbkRpj+oyJnAvPRc5Q2/Q+RdMHYwvGvsktY8RV6dFzDfLhFJZlMYcUBDMBY+DVWpBUfPvQyDfJx1Typ+LC34ADg3a8arPgEwenqAfm/RxCufclIelsG8CkXNjln4Lnz9Q+T5y+SfBhQ+VObELz1zOUXTgcEUT6k81kRO/SPmKheGj5Z790M1aeGjkay1sz8owu+ZWTVv6KS3JLPSfvP23TCex5UvyRz7goj0v7btd1BidbUgXI731pCij+fpg+57/v5YfYtaR1/4Pi7vJn464VLXjTS7BpS8q/lTVPyzx9Yk3/+8sLJbXX+jZ4/fmD1+cOTs/53q7NDkPuxnweHTIM3Bx/2PP9RJ+BRZ4knRdekl2SaenelSefvpz10/Nz5+ru/2QVjTXou8jx/UyLAKlD26Pf0QqGXMMYi+dRf0B14F4/D3y7EaCgo3voPJJmz0udQ/s39Emrv/OJjKfjBfu1kGwMPU9Nf+htyBCwVSG88UOVki2vV6q+TAmBGoDceTB4Dbq3+OrUCihMRbxw4TczqqNWfJzSAlaLSaw+Ucylewu79gysJv8LCy4cDzswi6N4/uGLAbibeOODYCmT//md0uuCyk82BcqzZrH//JNXIbFl9gTcOjMyBQvX7742slyL9Bl85MJJdZ5/3jyNpcPwdvnLAerexfnV/4v55Q173A741vbTcP3uyHLr5Nd44MBzY0nb/bzmIwYqn0wFLuzb+MAwDag/kwOfUPlvfX1S7cD+BW3+19Dr8sP8FjiPvTzzef7xAuHCYcKA/tU98hN/fBLZQtgPxeTc9z3qP8D7ef3Xi4GLd7w/AxfX+S6r33xULrL03v5PhKhff4+/Fcl1s+M0HeEfi5OMB4OD94fs0Oj/uDvBtHB48gBy+v3znrpdZaY8Fr96zavgC1fL+9H15/Pgy+D3x6ftQtgfen3pdQcL12AqkdwTpjeUFsvX9cbsN7L+cBCJsr+Iz8P1xbx8q0y+GQIi0dOPH3p93DlDZ7IUoulml5e3xON8TpzZxO/qzhkAIv41nq9NIDcRo/UHa2bM1/SNUQ9+RVbYpsf6g2op7xSdnh+xggwvVTSZ0SK6/qEzk3dxVn1APqr87dX0v8jn1J56pAemdX7a19jKpfwgV9NSwnbMIyl1/JIOeoPTQecid+g8P874G9QjcRZET9VdiUP2lD9FLdOv12lg0kOJvyjH2AN/U3g3lwfUtiBPVKoBSJXFgeYKtp2vwgPo7mdieU6yO27K87Ha7S1luj7Zj3j0B6lGh+kMe0TV6HUGVqGj9pcoo6uoxUwvWX9YecJ7sMZV5u084XIVLqb/lYZSVboX3UWZRSCkBJtYfC57G2Zisc83ilFOKf8l844JZdioKss35ft0au97PG1OAbRYiuQB7Xv15XQMuW+OzC9D/0vr7xew/aeRhLh8i2YsAAAAASUVORK5CYII=" alt=""/>
             </button>
           </div>
