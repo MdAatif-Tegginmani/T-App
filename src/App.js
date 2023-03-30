@@ -1,18 +1,59 @@
+import React from "react";
+
+import { Route, Routes } from "react-router-dom";
+
+
+
 import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import Footer from "./Components/Footer"
+
+
+import Dashboard from "./Pages/Dashboard";
+import Team from "./Pages/Team" ;
+import Projects from "./Pages/Projects";
+import Plans from "./Pages/Plans";
+
+
+
+
+
+
 
 
 function App() {
-
-
-
+  
+  
+  
   return (
-    <div className="App">
-        <Navbar></Navbar>
-        <Hero></Hero>
-        <Footer></Footer>
+    <>
+    
+    <Navbar />
+    
+    <div className="container" >
+    
+    <Routes>
+      <Route path="/" element={<Dashboard/>}></Route>
+      <Route path="/team" element={<Team/>}></Route>
+      <Route path="/projects" element={<Projects/>}></Route>
+      <Route path="/plans" element={<Plans/>}></Route>
+
+
+
+    </Routes>
+    
     </div>
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    
+    
+      
+    </>
   );
 }
 

@@ -7,7 +7,7 @@ function Cards(props) {
     <div className="relative m-0 mb-8 overflow-hidden rounded-none border-b border-white/10 bg-transparent bg-clip-border pb-8 text-center text-gray-700 shadow-none">
       
         <h2 className='text-xl text-black  font-bold my-2'>{props.cardHeading}</h2>
-        <hr />
+        <hr className='-black' />
         <strong>
         <p className='text-black text-lg my-3 font-medium'>
             {props.cardText}
