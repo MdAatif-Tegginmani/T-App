@@ -6,7 +6,7 @@ function Dashboard() {
   return (
     <>
       <Hero></Hero>
-      <Footer  ></Footer>
+      <Footer></Footer>
 
     
     </>

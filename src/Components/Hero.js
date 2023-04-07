@@ -16,7 +16,7 @@ function Hero() {
   return (
     <>
 
-    <div className="   bg-gray-700  opacity-80  py-32   ">
+    <div className="   bg-gray-700  opacity-80    ">
   <img id='img1' src="https://static.thehoneycombers.com/wp-content/uploads/sites/2/2022/07/The-Clan-Hotel.png" alt="" className=" absolute inset-y-12 mt-4 h-full w-full md:object-center"/>
      
   
