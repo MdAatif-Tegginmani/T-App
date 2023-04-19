@@ -4,7 +4,7 @@ export default function Products() {
   const [users, setUsers] = useState([]);
 
   const fetchUserData = () => {
-    fetch('https://fakestoreapi.com/products?limit=5')
+    fetch('https://fakestoreapi.com/products?limit=10')
     .then((response) => {
         return response.json();
       })
@@ -30,7 +30,7 @@ export default function Products() {
                 <h2>{prods.id}. {prods.title}</h2>
                 <img className="max-w-xs max-h-60" src={prods.image} alt="" />
                 <div className="">
-                <h2>${prods.price}</h2>
+                <h1>${prods.price}</h1>
                 <p>{prods.description}</p>
                 <br />
         

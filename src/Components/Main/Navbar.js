@@ -1,7 +1,10 @@
 import React from 'react'
-import { NavLink,Link} from 'react-router-dom'
-
+import { NavLink,Link,useNavigate} from 'react-router-dom'
 import SearchBar from "./SearchBar"
+import { getAuth, signOut } from "firebase/auth";
+
+
+// import { useAuth } from "firebase/userAuthContext";
 
 
 
@@ -10,8 +13,28 @@ import SearchBar from "./SearchBar"
 
 
 
+
+
+
+// }
 
 function Navbar() {
+  
+  const auth = getAuth();
+  const navigate =useNavigate()
+
+const userLogout =()=>{
+
+
+  
+  signOut(auth).then(() => {
+      navigate('/login')
+  }).catch((error) => {
+    console.log(error)
+    // An error happened.
+  });
+}
+  
   return (
     <>
 
@@ -57,13 +80,12 @@ function Navbar() {
           <Link to='/' as={NavLink} className="text-gray-100  hover:bg-gray-700 hover:text-white rounded-md px-2 py-0 text-2xl font-bold">Wanderer.com</Link>
 
 
-            <Link to="/" as={NavLink} className="text-gray-300  hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard </Link>
 
             <Link to="/team" as={NavLink} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team </Link>
 
             <Link to="/projects" as={NavLink} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</Link>
-
             <Link to="/products" as={NavLink} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</Link>
+
 
           </div>
           </div>
@@ -81,9 +103,10 @@ function Navbar() {
         
         <div className=" ml-3">
         <div>
-        <buthrefn type="buthrefn" className=" flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-buthrefn" aria-expanded="false" aria-haspopup="true">
-        <img className="h-8 w-8 rounded-full" src="" alt=""/>
-        </buthrefn>
+        <button onClick={userLogout} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' >Logout</button>
+
+{ /*       // <Link to="/login" as={NavLink} className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Login</Link>
+  */}
         </div>
         
         
